@@ -17,12 +17,13 @@ P(157-90)
 P(227-90)
 % P(end)
 
-stem(x, y, ':')
-hold on
+% stem(x, y, ':')
+% hold on
 axis([80, 260, 13, 19])
-plot(X, P), grid
+plot(x, y, 'x', X, P), grid
 
 Pm = spline(x, y, X);
 hold on
 plot(X, Pm, ':')
+hold off
 print('fig1a','-dpng')

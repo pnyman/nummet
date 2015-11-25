@@ -1,2 +1,2 @@
 #!/bin/bash
-pandoc title.txt rapport.md -o rapport.pdf -F pandoc-fignos
+pandoc -o rapport.pdf -F pandoc-fignos title.txt $(ls *.md)

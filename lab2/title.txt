@@ -1,21 +1,10 @@
 ---
 title: 'Numeriska metoder, laboration 2'
 author: 'Patrik Nyman'
+date: '\today'
 fontsize: 10
 toc: no
 toc-depth: 2
 header-includes:
-    \usepackage[swedish]{babel}
-    \usepackage[toc]{multitoc}
-    \renewcommand*{\multicolumntoc}{2}
-    \setlength{\columnseprule}{0.5pt}
-    \usepackage{tocloft}
-    \setlength\cftparskip{-2pt}
-    \setlength\cftbeforesecskip{2pt}
-    \usepackage[a4paper,
-        left=40mm,
-        right=40mm,
-        top=30mm,
-        bottom=30mm,
-       ]{geometry}
+    \usepackage{mystyle}
 ...

@@ -6,12 +6,16 @@
 x = [91 121 162 182 213 244]';
 y = [13.18 15.78 17.97 18.38 15.53 14.07]';
 
-A = [ones(6,1) x];
+% A = [ones(6,1) x];
+% c = A \ y;
+% yanp = A * c;
+% plot(x, y, 'x', x, yanp), grid
 
-c = A \ y;
-yanp = A * c;
+d = polyfit(x, y, 2);
+X = x(1):x(6);
+P = polyval(d, xplot);
+plot(x, y, 'x', X, P), grid
 
-plot(x, y, 'x', x, yanp), grid
+P(157 - 90)
+
 print('fig1b', '-dpng')
-
-yanp
