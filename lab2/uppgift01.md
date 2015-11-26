@@ -22,7 +22,7 @@ style='font-variant:small-caps;'>matlab</span>.  Som jämförelse plottas
 samma data med <span style='font-variant:small-caps;'>matlab</span>s
 `spline`-kommando.  Resultatet visas i figur @fig:fig1a.
 
-![Anpassning med femtegradspolynom och med spline (streckad linje)](fig1a.png){#fig:fig1a}
+![Anpassning med femtegradspolynom och med spline (streckad linje)](fig1a.pdf){#fig:fig1a}
 
 ~~~matlab
 x = [91 121 162 182 213 244]';
@@ -31,15 +31,10 @@ A = [ones(6,1) x x.^2 x.^3 x.^4 x.^5];
 c = A \ y;
 X = x(1):x(6);
 P = c(1) + c(2)*X + c(3)*X.^2 + c(4)*X.^3 + c(5)*X.^4 + c(6)*X.^5;
-stem(x, y, ':')
-hold on
-axis([80, 260, 13, 19])
-plot(X, P), grid
+plot(x, y, 'x', X, P), grid
 Pm = spline(x, y, X);
 hold on
-plot(X, Pm, ':')
-P(157 - 90)
-P(227 - 90)
+plot(X, Pm, '--')
 ~~~
 
 Solens uppetid en viss dag finns i `P(dagnr - 90)`. Det ger att 6
@@ -54,14 +49,14 @@ Här har <span style='font-variant:small-caps;'>matlab</span>s
 mätpunkterna. Soltiden för den 6\ juni blir 17.73\ h med denna modell. Se
 figur @fig:fig1b.
 
-![Anpassning med andragradspolynom](fig1b.png){#fig:fig1b}
+![Anpassning med andragradspolynom](fig1b.pdf){#fig:fig1b}
 
 ~~~matlab
 x = [91 121 162 182 213 244]';
 y = [13.18 15.78 17.97 18.38 15.53 14.07]';
 d = polyfit(x, y, 2);
 X = x(1):x(6);
-P = polyval(d, xplot);
+P = polyval(d, X);
 plot(x, y, 'x', X, P), grid
 ~~~
 
@@ -77,7 +72,7 @@ Felkvadratsumman fås som $\mathbf{r}^T \mathbf{r}$, där $\mathbf{r}$ är
 residualvektorn, och är $1.9750$.
 Nationaldagens soltid är `F(157)` $= 17.7654$.
 
-![Anpassning med trigonometriskt uttryck](fig1c.png){#fig:fig1c}
+![Anpassning med trigonometriskt uttryck och residualkurva](fig1c.pdf){#fig:fig1c}
 
 ~~~matlab
 % lade till dag 365 med samma värde som dag 1
@@ -93,8 +88,6 @@ fkvsum = r' * r  % felkvadratsumma
 F(157)           % 6 juni
 subplot(1, 2, 1)
 plot(x, y, 'r:o', X, F), grid
-title('Anpassning med trigonometriskt uttryck')
 subplot(1, 2, 2)
 plot(x, r), grid
-title('Residualkurva')
 ~~~

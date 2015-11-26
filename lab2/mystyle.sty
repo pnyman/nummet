@@ -48,3 +48,7 @@
     }
 }
 \makeatother
+
+\let\oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{%
+    \oldincludegraphics[width=0.8\textwidth]{#1}}

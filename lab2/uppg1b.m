@@ -13,9 +13,11 @@ y = [13.18 15.78 17.97 18.38 15.53 14.07]';
 
 d = polyfit(x, y, 2);
 X = x(1):x(6);
-P = polyval(d, xplot);
+P = polyval(d, X);
 plot(x, y, 'x', X, P), grid
+daspect([10 1 1])
 
 P(157 - 90)
 
-print('fig1b', '-dpng')
+print('fig1b', '-dpdf')
+system('pdfcrop --gscmd gs-noX11 fig1b.pdf fig1b.pdf');

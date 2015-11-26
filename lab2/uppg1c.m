@@ -19,11 +19,13 @@ F(157)
 
 subplot(1, 2, 1)
 plot(x, y, 'r:x', X, F), grid
-title('Anpassning med trigonometriskt uttryck')
+daspect([15 1 1])
+% title('Anpassning med trigonometriskt uttryck')
 
 subplot(1, 2, 2)
 plot(x, r), grid
-title('Residualkurva')
+daspect([100 1 1])
+% title('Residualkurva')
 
-% set(gcf,'PaperUnits','inches','PaperPosition',[-1 0 5 3])
-print('fig1c','-dpng')
+print('fig1c','-dpdf')
+system('pdfcrop --gscmd gs-noX11 fig1c.pdf fig1c.pdf');
