@@ -22,5 +22,5 @@ eq = I - ref
 es = S - ref
 
 % loglog(hv, Eht, hv, Ehs), grid
-% print('fig3b','-dpdf')
-% system('pdfcrop --gscmd gs-noX11 fig3b.pdf fig3b.pdf');
+% print('img/fig3b','-dpdf')
+% system('pdfcrop --gscmd gs-noX11 img/fig3b.pdf img/fig3b.pdf');

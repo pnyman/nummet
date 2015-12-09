@@ -39,3 +39,4 @@ Med $\alpha = 0.2$ och fem lösningar med halverade tidssteg blir resultatet
 som i figur @fig:fig4b.
 
 ![Euler explicit med $\alpha = 0.2$](fig4b.pdf){#fig:fig4b}
+

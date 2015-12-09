@@ -57,7 +57,7 @@ litet börjar avrundingsfelen bli märkbara.
    3.871324643831464
    4.401601067378252
 
-![$E_h$ för trapetsregeln (övre) och Simpsons metod](fig3b.pdf){#fig:fig3b}
+![$E_h$ för trapetsregeln (övre) och Simpsons metod](img/fig3b.pdf){#fig:fig3b}
 
 
 ## Uppgift 3c

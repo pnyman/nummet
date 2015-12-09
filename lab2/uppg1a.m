@@ -22,5 +22,5 @@ Pm = spline(x, y, X);
 hold on
 plot(X, Pm, '--')
 hold off
-print('fig1a','-dpdf')
-system('pdfcrop --gscmd gs-noX11 fig1a.pdf fig1a.pdf');
+print('img/fig1a','-dpdf')
+system('pdfcrop --gscmd gs-noX11 img/fig1a.pdf img/fig1a.pdf');

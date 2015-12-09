@@ -36,5 +36,5 @@ end
 loglog(hv, Eht, hv, Ehs), grid
 % axis([1.5*10e-2 1.4 10e-12 1])
 % daspect([5 1 1])
-print('fig3b','-dpdf')
-system('pdfcrop --gscmd gs-noX11 fig3b.pdf fig3b.pdf');
+print('img/fig3b','-dpdf')
+system('pdfcrop --gscmd gs-noX11 img/fig3b.pdf img/fig3b.pdf');

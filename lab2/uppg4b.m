@@ -31,6 +31,5 @@ for j = 1:5
     h = h / 2;
 end
 
-print('fig4b','-dpdf')
-system('pdfcrop --gscmd gs-noX11 fig4b.pdf fig4b.pdf');
-
+print('img/fig4b','-dpdf')
+system('pdfcrop --gscmd gs-noX11 img/fig4b.pdf img/fig4b.pdf');

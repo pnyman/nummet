@@ -27,5 +27,5 @@ plot(x, r), grid
 daspect([100 1 1])
 % title('Residualkurva')
 
-print('fig1c','-dpdf')
-system('pdfcrop --gscmd gs-noX11 fig1c.pdf fig1c.pdf');
+print('img/fig1c','-dpdf')
+system('pdfcrop --gscmd gs-noX11 img/fig1c.pdf img/fig1c.pdf');

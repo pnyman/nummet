@@ -22,7 +22,7 @@ style='font-variant:small-caps;'>matlab</span>.  Som jämförelse plottas
 samma data med <span style='font-variant:small-caps;'>matlab</span>s
 `spline`-kommando.  Resultatet visas i figur @fig:fig1a.
 
-![Anpassning med femtegradspolynom och med spline (streckad linje)](fig1a.pdf){#fig:fig1a}
+![Anpassning med femtegradspolynom och med spline (streckad linje)](img/fig1a.pdf){#fig:fig1a}
 
 
 6 juni (dag\ 157) var solen uppe 17.69\ h, och 15 augusti (dag\ 227) var
@@ -36,7 +36,7 @@ Här har <span style='font-variant:small-caps;'>matlab</span>s
 mätpunkterna. Soltiden för den 6\ juni blir 17.73\ h med denna modell. Se
 figur @fig:fig1b.
 
-![Anpassning med andragradspolynom](fig1b.pdf){#fig:fig1b}
+![Anpassning med andragradspolynom](img/fig1b.pdf){#fig:fig1b}
 
 
 ## Uppgift 1c
@@ -51,5 +51,5 @@ Felkvadratsumman fås som $\mathbf{r}^T \mathbf{r}$, där $\mathbf{r}$ är
 residualvektorn, och är $1.9750$.
 Nationaldagens soltid är `F(157)` $= 17.7654$.
 
-![Anpassning med trigonometriskt uttryck och residualkurva](fig1c.pdf){#fig:fig1c}
+![Anpassning med trigonometriskt uttryck och residualkurva](img/fig1c.pdf){#fig:fig1c}
 

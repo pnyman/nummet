@@ -15,5 +15,5 @@ disp([xplot yplot])
 loglog(xplot, yplot)
 axis([10e-15 1 10e-13 10e-1])
 daspect([1 2 1])
-print('fig2c','-dpdf')
-system('pdfcrop --gscmd gs-noX11 fig2c.pdf fig2c.pdf');
+print('img/fig2c','-dpdf')
+system('pdfcrop --gscmd gs-noX11 img/fig2c.pdf img/fig2c.pdf');

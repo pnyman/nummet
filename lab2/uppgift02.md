@@ -42,7 +42,7 @@ också i grafen.
 
 \pagebreak
 
-![Absolutfelet $e_T$ vid framåtdifferens](fig2a.pdf){#fig:fig2a}
+![Absolutfelet $e_T$ vid framåtdifferens](img/fig2a.pdf){#fig:fig2a}
 
 
 ## Uppgift 2c--d
@@ -77,6 +77,6 @@ $1.1141 \cdot 10^{-11}$ redan vid $h = 10^{-5}$.
 <!--- 0.000000000000010   0.003706976198187 --->
 <!--- 0.000000000000001   0.014809206444439 --->
 
-![Absolutfelet $e_T$ vid centraldifferens](fig2c.pdf){#fig:fig2c}
+![Absolutfelet $e_T$ vid centraldifferens](img/fig2c.pdf){#fig:fig2c}
 
 

@@ -19,5 +19,5 @@ daspect([10 1 1])
 
 P(157 - 90)
 
-print('fig1b', '-dpdf')
-system('pdfcrop --gscmd gs-noX11 fig1b.pdf fig1b.pdf');
+print('img/fig1b', '-dpdf')
+system('pdfcrop --gscmd gs-noX11 img/fig1b.pdf img/fig1b.pdf');
