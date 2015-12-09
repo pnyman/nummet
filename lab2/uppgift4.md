@@ -30,7 +30,7 @@ som i figur @fig:fig4a.
 
 \newpage
 
-![Euler explicit med $\alpha = 20$](fig4a.pdf){#fig:fig4a}
+![Euler explicit med $\alpha = 20$](img/fig4a.pdf){#fig:fig4a}
 
 
 ## Uppgift 4b
@@ -38,5 +38,5 @@ som i figur @fig:fig4a.
 Med $\alpha = 0.2$ och fem lösningar med halverade tidssteg blir resultatet
 som i figur @fig:fig4b.
 
-![Euler explicit med $\alpha = 0.2$](fig4b.pdf){#fig:fig4b}
+![Euler explicit med $\alpha = 0.2$](img/fig4b.pdf){#fig:fig4b}
 
