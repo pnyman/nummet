@@ -1,9 +1,7 @@
 %
-% Numeriska metoder, lab 2, uppgift 4b
+% Numeriska metoder, lab 2, uppgift 4b_2
 % Patrik Nyman, ht 2015
 %
-
-
 
 tslut = 20;
 h = 0.1;
@@ -16,8 +14,11 @@ for j = 1:5
     n = tslut / h;
 
     for i = 1:n
-        f = funk_uppg4(t, y);
-        y = y + h * f;
+        f1 = funk_uppg4(t, y);
+        f2 = funk_uppg4(t + h/2, y + h*f1/2);
+        f3 = funk_uppg4(t + h/2, y + h*f2/2);
+        f4 = funk_uppg4(t + h, y + h*f3);
+        y = y + h/6 * (f1 + 2*f2 + 2*f3 + f4);
         t = t + h;
         T = [T; t];
         Y = [Y; y'];
@@ -33,5 +34,5 @@ for j = 1:5
     h = h / 2;
 end
 
-print('img/fig4b','-dpdf')
-system('pdfcrop --gscmd gs-noX11 img/fig4b.pdf img/fig4b.pdf');
+print('img/fig4b_2','-dpdf')
+system('pdfcrop --gscmd gs-noX11 img/fig4b_2.pdf img/fig4b_2.pdf');
