@@ -17,13 +17,14 @@ r = y - A * c;
 fkvsum = r' * r
 F(157)
 
-subplot(1, 2, 1)
-plot(x, y, 'r:x', X, F), grid
+subplot(2, 1, 1)
+% plot(x, y, 'r:x', X, F), grid
+plot(X, F), grid
 daspect([15 1 1])
 % title('Anpassning med trigonometriskt uttryck')
 
-subplot(1, 2, 2)
-plot(x, r), grid
+subplot(2, 1, 2)
+plot(x, r, x, r, 'x'), grid
 daspect([100 1 1])
 % title('Residualkurva')
 

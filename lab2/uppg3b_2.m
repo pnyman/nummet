@@ -12,7 +12,8 @@ end
 
 table = [];
 for i = 1:length(I)-2
-    table = [ table ; (I(i) - I(i+1)) / (I(i+1) - I(i+2)) ];
+    val = (I(i) - I(i+1)) / (I(i+1) - I(i+2));
+    table = [ table log2(val) ];
 end
 
-disp(table)
+disp(table')

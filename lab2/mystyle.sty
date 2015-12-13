@@ -1,8 +1,16 @@
 \usepackage[swedish]{babel}
 
+\usepackage[a4paper,
+    left=40mm,
+    right=40mm,
+    top=30mm,
+    bottom=30mm,
+]{geometry}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 % \renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
 \fancyhead[c]{Patrik Nyman, Laboration 2}
 \lhead{}
 \rhead{}
@@ -15,13 +23,6 @@
 \setlength\cftparskip{-3pt}
 \setlength\cftbeforesubsecskip{-3pt}
 \setlength\cftbeforesecskip{-2pt}
-
-\usepackage[a4paper,
-    left=40mm,
-    right=40mm,
-    top=30mm,
-    bottom=30mm,
-]{geometry}
 
 \usepackage{titlesec}
 \titleformat{\section}
@@ -39,6 +40,7 @@
 \predate{\begin{center}\normalsize}
 \postdate{\end{center}}
 
+
 \makeatletter
 \AtBeginDocument{%
     \renewcommand\tableofcontents{\section*{\contentsname
@@ -52,3 +54,5 @@
 \let\oldincludegraphics\includegraphics
 \renewcommand{\includegraphics}[1]{%
     \oldincludegraphics[width=0.8\textwidth]{#1}}
+
+

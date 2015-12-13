@@ -29,6 +29,21 @@ samma data med <span style='font-variant:small-caps;'>matlab</span>s
 den uppe 13.73\ h.
 
 
+~~~matlab
+    x = [91 121 162 182 213 244]';
+    y = [13.18 15.78 17.97 18.38 15.53 14.07]';
+    A = [ones(6,1) x x.^2 x.^3 x.^4 x.^5];
+    c = A \ y; X = x(1):x(6);
+    P = c(1) + c(2)*X + c(3)*X.^2 + c(4)*X.^3 + c(5)*X.^4 + c(6)*X.^5;
+    P(157-90) % 6 juni
+    P(227-90) % 15 augusti
+    plot(x, y, 'x', X, P), grid
+    Pm = spline(x, y, X);
+    hold on
+    plot(X, Pm, '--')
+~~~
+
+
 ## Uppgift 1b
 
 Här har <span style='font-variant:small-caps;'>matlab</span>s
@@ -38,6 +53,15 @@ figur @fig:fig1b.
 
 ![Anpassning med andragradspolynom](img/fig1b.pdf){#fig:fig1b}
 
+~~~matlab
+    x = [91 121 162 182 213 244]';
+    y = [13.18 15.78 17.97 18.38 15.53 14.07]';
+    d = polyfit(x, y, 2);
+    X = x(1):x(6);
+    P = polyval(d, X);
+    plot(x, y, 'x', X, P), grid
+    P(157 - 90) % 6 juni
+~~~
 
 ## Uppgift 1c
 
@@ -52,4 +76,22 @@ residualvektorn, och är $1.9750$.
 Nationaldagens soltid är `F(157)` $= 17.7654$.
 
 ![Anpassning med trigonometriskt uttryck och residualkurva](img/fig1c.pdf){#fig:fig1c}
+
+~~~matlab
+    % lade till dag 365 med samma värde som dag 1
+    x = [1 32 60 91 121 162 182 213 244 274 305 335 365]';
+    y = [6.13 8.02 10.42 13.18 15.78 17.97 18.38 15.53 14.07 11.43 8.73 6.55 6.13]';
+    w = 2 * pi / 365;
+    a = [ones(13, 1) cos(w*x) sin(w*x)];
+    c = a \ y; x = x(1):x(13);
+    f = c(1) + c(2) * cos(w*x) + c(3) * sin(w*x);
+    r = y - a * c;
+    fkvsum = r' * r % felkvadratsumma
+    f(157)          % 6 juni
+    subplot(1, 2, 1)
+    plot(X, F), grid
+    subplot(1, 2, 2)
+    plot(x, r, x, r, 'x'), grid
+~~~
+
 

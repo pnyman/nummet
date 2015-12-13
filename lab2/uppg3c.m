@@ -6,10 +6,9 @@
 L = 2.6;
 
 ref = quad(@fq, 0, L, 1e-14)
-[I, fcnt] = quad(@fq, 0, L, 1e-6)
+[Q, fcnt] = quad(@fq, 0, L, 1e-6)
 
-n = fcnt;
-h = L / n;
+n = fcnt; h = L / n;
 % trapetsregeln
 x = h * (0:n); f = fq(x);
 T = h * (sum(f) - f(1) / 2 - f(n+1) / 2);
@@ -18,8 +17,10 @@ n = 2*n; h = h/2; x = h * (0:n); f = fq(x);
 Tt = h * (sum(f) - f(1) / 2 - f(n+1) / 2);
 S = Tt + (Tt - T) / 3
 
-eq = I - ref
+eq = Q - ref
 es = S - ref
+
+% disp([ref ; Q; S; eq; es])
 
 % loglog(hv, Eht, hv, Ehs), grid
 % print('img/fig3b','-dpdf')

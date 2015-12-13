@@ -3,8 +3,9 @@ title: 'Numeriska metoder, laboration 2'
 author: 'Patrik Nyman'
 date: '\today'
 fontsize: 10
-toc: no
+toc: yes
 toc-depth: 2
+number-sections: true
 header-includes:
     \usepackage{mystyle}
 ...
