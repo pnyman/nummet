@@ -28,13 +28,45 @@ På vektorform kan det uttryckas som $\mathbf{y'} =
 Med $\alpha = 10$ och steget $h = 0.1$ fram till $t = 20$ blir resultatet
 som i figur @fig:fig4a.
 
+Skriver vi om ekvationssystemet på matrisform får vi
 
-![Euler explicit med $\alpha = 20$](img/fig4a.pdf){#fig:fig4a}
+$$
+\begin{pmatrix}
+y'_1 \\ y'_2
+\end{pmatrix}
+= A
+\begin{pmatrix}
+y_1 \\ y_2
+\end{pmatrix}
+=
+\begin{pmatrix*}[r]
+0 & 1 \\
+-1 & -\alpha
+\end{pmatrix*}
+\begin{pmatrix}
+y_1 \\ y_2
+\end{pmatrix}
+= \big[\alpha = 10\big] =
+\begin{pmatrix*}[r]
+0 & 1 \\
+-1 & -10
+\end{pmatrix*}
+\begin{pmatrix}
+y_1 \\ y_2
+\end{pmatrix}.
+$$
+
+Egenvärdena $\lambda_n$ för $A$ är $-5-2\sqrt{6}$ och $-5+2\sqrt{6}$.  För
+Framåt Euler når vi absolutstabilitet då $h < 2/|\lambda_n|$.  Det minsta
+värdet är $2/(-5-2\sqrt{6}) \approx 0.2$.  Vi plottar en lösning
+med $h=0.21$ (fig @fig:fig4a_2), och kan konstatera att den mycket riktigt
+är instabil.
 
 
 ~~~matlab
     function f = funk_uppg4(t, y)
-        a = 0.2;
+        a = 10;
+        % a = 0.2;
         f = [y(2), - y(1) - a*y(2)]';
 
     y = [1 0]'; % startvärden
@@ -51,6 +83,10 @@ som i figur @fig:fig4a.
     plot(T, Y(:,1)), grid
 ~~~
 
+![Framåt Euler med $\alpha = 10, h=0.1$](img/fig4a.pdf){#fig:fig4a}
+
+![Framåt Euler med $\alpha = 10, h=0.21$](img/fig4a_2.pdf){#fig:fig4a_2}
+
 
 ## Uppgift 4b
 
@@ -65,7 +101,7 @@ kan alltså vara åtminstone $1/0.5^4 = 16$ ggr längre.
 Plottning i fasplanet ger kurvan i figur @fig:fig4b_2. Rörelsen går utifrån
 och in mot mitten av spiralen.
 
-![Euler explicit med $\alpha = 0.2$](img/fig4b.pdf){#fig:fig4b}
+![Framåt Euler med $\alpha = 0.2$](img/fig4b.pdf){#fig:fig4b}
 
 ![Runge-Kutta 4 med $\alpha = 0.2$](img/fig4b_2.pdf){#fig:fig4b_2}
 

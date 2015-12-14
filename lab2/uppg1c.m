@@ -20,12 +20,12 @@ F(157)
 subplot(2, 1, 1)
 % plot(x, y, 'r:x', X, F), grid
 plot(X, F), grid
-daspect([15 1 1])
+daspect([10 1 1])
 % title('Anpassning med trigonometriskt uttryck')
 
 subplot(2, 1, 2)
 plot(x, r, x, r, 'x'), grid
-daspect([100 1 1])
+daspect([40 1 1])
 % title('Residualkurva')
 
 print('img/fig1c','-dpdf')

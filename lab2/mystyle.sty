@@ -26,9 +26,9 @@
 
 \usepackage{titlesec}
 \titleformat{\section}
-    {\normalfont\large\bfseries}{\thesection}{}{}
+    {\normalfont\Large\bfseries}{\thesection}{}{}
 \titleformat{\subsection}
-    {\normalfont\normalsize\bfseries}{\thesubsection}{}{}
+    {\normalfont\large\bfseries}{\thesubsection}{}{}
 \titlespacing{\section}{0pt}{6ex}{0ex}
 \titlespacing{\subsection}{0pt}{1ex}{0ex}
 
@@ -39,6 +39,8 @@
 \postauthor{\end{center}}
 \predate{\begin{center}\normalsize}
 \postdate{\end{center}}
+
+\usepackage{mathtools}
 
 
 \makeatletter
@@ -53,6 +55,6 @@
 
 \let\oldincludegraphics\includegraphics
 \renewcommand{\includegraphics}[1]{%
-    \oldincludegraphics[width=0.8\textwidth]{#1}}
+    \oldincludegraphics[width=0.9\textwidth]{#1}}
 
 
